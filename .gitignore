@@ -1,0 +1,22 @@
+# dependencias
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# secretos: NUNCA se suben
+.env
+.env.local
+.env.*.local
+
+# sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# logs
+*.log
+npm-debug.log*
