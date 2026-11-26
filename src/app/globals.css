@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* =====================================================================
+   Tema de JOKAGI (colores tomados del Figma)
+   Se usan como clases de Tailwind:  bg-fondo, text-marino, bg-primario...
+   ===================================================================== */
+@theme {
+  /* Fondos */
+  --color-fondo: #fdf9f0;          /* fondo general de la página */
+  --color-superficie: #ffffff;     /* tarjetas blancas */
+  --color-crema: #f7f3ea;          /* días del calendario, pie de página */
+  --color-arena: #f1eee5;          /* avisos, bloques del resumen */
+  --color-piedra: #ece8df;         /* link activo del menú, paso pendiente */
+  --color-seleccion: #eff4f4;      /* tarjeta de estilista seleccionada */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Azules */
+  --color-primario: #136396;       /* botones, etiquetas, links */
+  --color-primario-hover: #0f527d;
+  --color-marino: #102c49;         /* títulos, día seleccionado */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Texto y bordes */
+  --color-tinta: #102c49;          /* texto principal */
+  --color-gris: #595d62;           /* texto secundario */
+  --color-gris-claro: #a4acb1;     /* texto deshabilitado */
+  --color-borde: #e6e2d9;
+
+  /* Estados */
+  --color-error: #c2524c;
+
+  /* Tipografía (la variable la define next/font en layout.tsx) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-tinta);
 }
